@@ -1,7 +1,7 @@
-//Jan 17
-//fibonaci series 
+// //Jan 17
+// //fibonaci series 
 // let a = 0;
-// let b = ;
+// let b =1;
 // let fib = 0;
 // for (let i=0; i<20; i++){
 //   console.log(fib);
@@ -10,7 +10,7 @@
 //   fib = a + b;
 // }
 
-//WAP to find mid number among 3 numbers based on value
+// //WAP to find mid number among 3 numbers based on value
 // let n1 = 20;
 // let n2 = 82;
 // let n3 = 63;
@@ -23,8 +23,8 @@
 //   console.log(n3 + " is the middle number");
 // }
 
-//Jan 18
-//WAP to reverse a interger: i.e. reverse 9703 to 3079 
+// //Jan 18
+// //WAP to reverse a interger: i.e. reverse 9703 to 3079 
 // let orgnum = 9703;
 // let dub = orgnum;
 // let revnum = 0;
@@ -38,7 +38,7 @@
 // }
 // console.log("The reverse of " + orgnum + " is " + revnum);
 
-// //print the sum of first n even numbers 
+// // //print the sum of first n even numbers 
 // let evenNum = 5;
 // let sumOfEven = 0;
 // let i = 1;
@@ -52,7 +52,7 @@
 // }
 // console.log("Sum of first " + evenNum + " even numbers is " + sumOfEven);
 
-//Random number generator game
+// //Random number generator game
 // let random = Math.floor(Math.random()*100);
 // let useTry = 0;
 // let guessed = parseInt(prompt("Enter a number between 0 to 99: "));
@@ -68,9 +68,9 @@
 // }while(guessed != random);
 // console.log("Congratulations, you guessed correct number " + guessed + " in "+useTry+ " turns");
 
-//Jan 20
-//Find the sum of first 10 even numbers 
-// let a = 2;
+// //Jan 20
+// //Find the sum of first 10 even numbers 
+// a = 2;
 // let sum = 0;
 // for(let i = 0; i<10; i++){
 //   sum = sum + a;
@@ -78,9 +78,9 @@
 // }
 // console.log("Sum of first 10 even numbers is " + sum);
 
-//Print the sum of first 5 prime numner 
+// //Print the sum of first 5 prime numner 
 // let sumP = 0;
-// let b = 2;
+// b = 2;
 // let n = 0;
 // while(n<5){
 //   let fac = 0
@@ -98,7 +98,7 @@
 // }
 // console.log("Sum of first 5 prime numbers is "+ sumP);
 
-//Check if number is even or odd using function
+// //Check if number is even or odd using function
 // let type;
 // function checkOddEven(a){
 //   if(a % 2 == 0){
@@ -140,3 +140,4 @@
 //   }
 // }
 
+//Jan 26
