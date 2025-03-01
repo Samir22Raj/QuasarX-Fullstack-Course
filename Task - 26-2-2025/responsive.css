@@ -1,0 +1,18 @@
+@media screen and (max-width: 520px) {
+  h1, .h1 {
+    font-size: 20px;
+  }
+
+  #todo-form {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  #todo-form input[type="text"], #todo-form button {
+    width: 100%;
+  }
+
+  #todo-list li {
+    flex-direction: column;
+  }
+}
