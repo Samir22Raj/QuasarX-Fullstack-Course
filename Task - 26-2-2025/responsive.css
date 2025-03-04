@@ -1,18 +1,28 @@
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 1280px) {
+  .image {
+    width: calc(50% - 16px);
+  }
+}
+
+@media screen and (max-width: 640px) {
   h1, .h1 {
     font-size: 20px;
   }
 
-  #todo-form {
+  .todo-form {
     flex-wrap: wrap;
     row-gap: 8px;
   }
 
-  #todo-form input[type="text"], #todo-form button {
+  .todo-form input[type="text"], .todo-form button {
     width: 100%;
   }
 
-  #todo-list li {
+  .todo-list li {
     flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
   }
 }

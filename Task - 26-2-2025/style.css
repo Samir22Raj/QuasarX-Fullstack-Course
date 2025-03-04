@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  padding: 10vw;
+  padding: 5vw 10vw;
   background: linear-gradient(to right, #6DD5FA, #FF758C);
   color: #333;
 }
@@ -48,9 +48,8 @@ h1, .h1 {
   display: none;
 }
 
-/*Styles for ToDo List*/
-#todo-app {
-  max-width: 640px;
+.container {
+  max-width: 1280px;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -58,25 +57,30 @@ h1, .h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#todo-form{
+/*Styles for ToDo List*/
+.todo-app {
+  margin-bottom: 24px;
+}
+
+.todo-form {
   display: flex;
   justify-content: space-around;
   gap: 16px;
 }
 
-#todo-form input[type="text"] {
+.todo-form input[type="text"] {
   width: 100%;
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 4px;
 }
 
-#todo-list {
+.todo-list {
   list-style: none;
   padding: 0;
 }
 
-#todo-list li {
+.todo-list li {
   background-color: #c9c9c9;
   margin-top: 10px;
   padding: 10px;
@@ -85,20 +89,146 @@ h1, .h1 {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  overflow: auto;
 }
 
-#todo-list li .task {
+.todo-list li .task {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#todo-list li .task input[type="checkbox"] {
+.todo-list li .task input[type="checkbox"] {
   margin-right: 8px;
 }
 
-#todo-list li .buttons {
+.todo-list li .buttons {
   min-width: 30%;
   display: flex;
   justify-content: space-evenly;
+}
+
+/*Styles for Image Gallery*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.image {
+  width: calc(25% - 16px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.3s, border 0.3s;
+}
+
+.image:hover {
+  opacity: 0.7;
+  border: 1px solid #777;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/*Tic-Tac-Toe game styles*/
+.tic-tac-toe {
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  font-size: 12vmin;
+  font-weight: 700;
+}
+
+.hide {
+  display: none;
+}
+
+.message {
+  margin-bottom: 16px;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.black {
+  color: #000000;
 }

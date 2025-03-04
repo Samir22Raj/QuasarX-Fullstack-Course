@@ -8,15 +8,66 @@
   <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-  <div id="todo-app">
-    <h2 class="h1">My To-Do List</h2>
-    <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="Add a new task...">
-        <button class="btn" type="submit">Add Task</button>
-    </form>
-    <ul id="todo-list">
-        <!-- Tasks will be added here -->
-    </ul>
+  <div class="container">
+    <div class="todo-app">
+      <h2 class="h1">My To-Do List</h2>
+      <form id="todo-form" class="todo-form">
+          <input type="text" id="todo-input" class="todo-input" placeholder="Add a new task...">
+          <button class="btn" type="submit">Add Task</button>
+      </form>
+      <ul id="todo-list" class="todo-list">
+          <!-- Tasks will be added here -->
+      </ul>
+    </div>
+
+    <div class="image-gallery">
+      <h2 class="h1">Image Gallery</h2>
+      <div class="gallery">
+        <figure class="image">
+          <img src="images/sea.jpg" alt="Sea" width="600" height="400">
+        </figure>
+
+        <figure class="image">
+          <img src="images/forest.jpg" alt="Forest" width="600" height="400">
+        </figure>
+
+        <figure class="image">
+          <img src="images/mountains.jpg" alt="Mountains" width="600" height="400">
+        </figure>
+
+        <figure class="image">
+          <img src="images/lights.jpg" alt="lights" width="600" height="400">
+        </figure>
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+      </div>
+    </div>
+
+    <div class="tic-tac-toe">
+      <h2 class="h1">Tic-Tac-Toe</h2>
+      <p id="turn">Player <span id="player">O</span>'s Turn</p>
+      <div class="game">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+      </div>
+      <button id="reset" class="btn">Reset Game</button>
+      <div class="results hide">
+        <p class="message"></p>
+        <button id="newgame" class="btn">New Game</button>
+      </div>
+    </div>
   </div>
   <script src="main.js"></script>
 </body>
