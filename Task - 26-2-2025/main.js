@@ -148,7 +148,6 @@ boxes.forEach((box) => {
       player.innerText = `X`;
       turnO = false;
       box.disabled = true;
-      clickCount++;
       if(!box.classList.contains('red')){
         box.classList.add('red');
       }
@@ -163,14 +162,8 @@ boxes.forEach((box) => {
       }
     }
     box.disaled = true;
+    clickCount++;
     checkWinner();
-    if (clickCount == 9) {
-      msg.innerText = `Game has ended in draw.`;
-      results.classList.remove("hide");
-      notify.classList.add("hide");
-      resetGame.classList.add("hide");
-      disableBoxes();
-    }
   });
 });
 
@@ -184,8 +177,16 @@ const checkWinner = () => {
       if (posVal1 === posVal2 && posVal2 === posVal3) {
         winMessage(posVal1);
       }
+      if (clickCount == 9) {
+        msg.innerText = `Game has ended in draw.`;
+        results.classList.remove("hide");
+        notify.classList.add("hide");
+        resetGame.classList.add("hide");
+        disableBoxes();
+      }
     }
   }
+
 };
 
 const winMessage = (winner) => {
