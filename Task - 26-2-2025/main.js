@@ -129,6 +129,7 @@ let msg = document.querySelector(".message");
 
 let turnO = true; //player O goes first
 let clickCount = 0;
+let win = 0;
 
 const winPatters = [
   [0, 1, 2],
@@ -177,13 +178,13 @@ const checkWinner = () => {
       if (posVal1 === posVal2 && posVal2 === posVal3) {
         winMessage(posVal1);
       }
-      if (clickCount == 9) {
-        msg.innerText = `Game has ended in draw.`;
-        results.classList.remove("hide");
-        notify.classList.add("hide");
-        resetGame.classList.add("hide");
-        disableBoxes();
-      }
+    }
+    if (clickCount == 9 && !win) {
+      msg.innerText = `Game has ended in draw.`;
+      results.classList.remove("hide");
+      notify.classList.add("hide");
+      resetGame.classList.add("hide");
+      disableBoxes();
     }
   }
 
@@ -195,6 +196,7 @@ const winMessage = (winner) => {
   disableBoxes();
   notify.classList.add("hide");
   resetGame.classList.add("hide");
+  win = 1;
 };
 
 const disableBoxes = () => {
@@ -216,6 +218,7 @@ const reset = () => {
   enableBoxes();
   results.classList.add("hide");
   clickCount = 0;
+  win = 0
   resetGame.classList.remove("hide");
   notify.classList.remove("hide");
 };
